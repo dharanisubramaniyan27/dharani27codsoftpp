@@ -1,0 +1,30 @@
+tasks = []
+def add_task():
+    task = input("Enter the task: ")
+    tasks.append(task)
+    print("Task added successfully!")
+def show_tasks():
+    if tasks:
+        print("Your To-Do List:")
+        for index, task in enumerate(tasks, 1):
+            print(f"{index}. {task}")
+    else:
+        print("No tasks in the list.")
+while True:
+    print("\n1. Add Task")
+    print("2. Show Tasks")
+    print("3. Exit")
+    
+    choice = input("Enter your choice (1/2/3): ")
+    
+    if choice == '1':
+        add_task()
+    elif choice == '2':
+        show_tasks()
+    elif choice == '3':
+        print("Exiting the To-Do List application. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+
